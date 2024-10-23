@@ -36,7 +36,7 @@ const ReportingPage = () => {
   // Fungsi untuk mengambil data dari backend berdasarkan halaman dan parameter unik
   const fetchData = async (uniqueParam, currentPage = 1) => {
     setLoading(true);
-    const url = `https://vercel.com/api/toolbar/link/asabri.vercel.app?via=project-dashboard-alias-list&p=1&page=${currentPage}&limit=${limit}&offset=${offset}&uniqueParam=${uniqueParam}`;
+    const url = `http://localhost:5000/api/data?page=${currentPage}&limit=${limit}&offset=${offset}&uniqueParam=${uniqueParam}`;
 
     try {
       const response = await axios.get(url);
@@ -55,7 +55,7 @@ const ReportingPage = () => {
     setLoading(true);
     try {
       const uniqueParam = new Date().getTime();
-      const response = await axios.post('http://localhost:5000/api/execute-tax-calculation', { uniqueParam });
+      const response = await axios.post('https://vercel.com/api/toolbar/link/asabri.vercel.app?via=project-dashboard-alias-list&p=1&page=/', { uniqueParam });
 
       // Pastikan data yang diterima dari response disimpan ke localStorage
       const dataToSave = response.data.recordset;

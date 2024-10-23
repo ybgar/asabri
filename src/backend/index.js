@@ -9,13 +9,13 @@ app.use(express.json()); // For parsing JSON requests
 // MySQL connection
 // SQL Server configuration
 const dbConfig = {
-  user: 'magangsisfo',
-  password: 'L0goT3sl4@@',
-  server: '172.30.33.47',
-  database: 'ASABRI_PESERTA',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  server: process.env.DB_SERVER,
+  database: process.env.DB_DATABASE,
   options: {
-    encrypt: false, // Disable encryption if not required
-    trustServerCertificate: true, // Still trusting the server certificate for development
+    encrypt: process.env.DB_ENCRYPT === 'true', // Convert string to boolean
+    trustServerCertificate: process.env.DB_TRUST_SERVER_CERTIFICATE === 'true', // Convert string to boolean
   },
 };
 

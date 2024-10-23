@@ -36,7 +36,7 @@ const ReportingPage = () => {
   // Fungsi untuk mengambil data dari backend berdasarkan halaman dan parameter unik
   const fetchData = async (uniqueParam, currentPage = 1) => {
     setLoading(true);
-    const url = `http://localhost:5000/api/data?page=${currentPage}&limit=${limit}&offset=${offset}&uniqueParam=${uniqueParam}`;
+    const url = `https://vercel.com/api/toolbar/link/asabri.vercel.app?via=project-dashboard-alias-list&p=1&page=${currentPage}&limit=${limit}&offset=${offset}&uniqueParam=${uniqueParam}`;
 
     try {
       const response = await axios.get(url);

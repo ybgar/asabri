@@ -1,0 +1,132 @@
+/* ReportingPage.css */
+
+/* Fullscreen Mode */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    overflow: auto;
+    z-index: 9999; /* Pastikan z-index cukup tinggi untuk menutupi elemen lainnya */
+    padding: 20px;
+  }
+  
+  /* Fullscreen Table */
+  .fullscreen-table {
+    width: 100%;
+    height: calc(100vh - 40px); /* Tinggi tabel menyesuaikan tinggi viewport */
+    overflow: auto; /* Tampilkan scrollbar jika tabel terlalu tinggi */
+  }
+  
+  /* Tabel Styling */
+  .table thead th {
+    background-color: #002E5E;
+    color: white;
+    position: sticky;
+    top: 0; /* Buat header tetap terlihat saat scroll */
+    z-index: 10;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight baris saat hover */
+  }
+  
+  /* Tambahkan gaya pada pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination button[disabled] {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Tombol Grid dan Ekspor */
+  .btn-outline-danger, .btn-outline-success {
+    background-color: white;
+    border: 1px solid;
+  }
+  
+  .btn-danger, .btn-success {
+    color: white;
+  }
+  
+  .btn-outline-danger:hover, .btn-outline-success:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Styling saat gridView aktif */
+  .fullscreen .table-container {
+    max-height: calc(100vh - 150px); /* Tabel menyesuaikan tinggi */
+    overflow-y: auto;
+  }
+  
+  .fullscreen-table thead th {
+    position: sticky; /* Buat header tabel tetap terlihat saat scroll */
+    top: 0;
+    background-color: #002E5E;
+    color: #fff;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+  }
+  
+  /* File: ReportingPage.css */
+
+.fullscreen-table {
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.table thead tr {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #2c3e50;
+}
+
+.table tbody tr:hover {
+  background-color: #ddd;
+}

@@ -84,7 +84,7 @@ const TableComponent = () => {
     setLoading(true);
     try {
       const uniqueParam = new Date().getTime();
-      const response = await axios.post('http://localhost:5000/api/execute-tax-calculation', { uniqueParam });
+      const response = await axios.post('https://vercel.com/api/toolbar/link/asabri.vercel.app?via=project-dashboard-alias-list&p=1&page=/', { uniqueParam });
 
       // Pastikan data yang diterima dari response disimpan ke localStorage
       const dataToSave = response.data.recordset;
